@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Sagan</title>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/default.css'}">
+    
+    <!-- Template -->
+	
+  	<script id="book-template" type="text/html">
+      <li class="title">Book:<span class="content"> <%= title %></span> <input type="text" value="<%= title %>" /> </li>
+      <li class="pages">Pages:<span class="content"> <%= pages %></span>  <input type="text" value="<%= pages %>" /> </li>
+      <li><a class="destroy" href="#">Eliminar:</a></li>
+    </script>
+  
+	  <!-- Javascript -->
+  	<script src="js/libs/jquery-1.4.3.min.js"></script>
+  	<script src="js/libs/underscore.js"></script>
+  	<script src="js/libs/backbone.js"></script>
+  	<script src="js/app.js"></script>
+  	<script src="js/models/book.js"></script>
+  	<script src="js/collections/book.js"></script>
+  	<script src="js/views/book.js"></script>
+  	
+	</head>
+<body>
+  
+
+  <div id="books"></div>
+  
+
+</body>
+</html>

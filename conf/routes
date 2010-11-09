@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+
+# RestFul API
+GET		/api/1/{controller}									{controller}.read
+GET		/api/1/{controller}(/{id})?							{controller}.read
+POST	/api/1/{controller}									{controller}.create
+PUT		/api/1/{controller}/{id}							{controller}.update
+DELETE	/api/1/{controller}/{id}							{controller}.destroy
+
+# Admin Module
+*		/admin								module:crud
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+GET     /js/                                staticDir:public/js
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
